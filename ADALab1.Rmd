@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-#Setting Up Packages
+**#Setting Up Packages**
 
 ```{r}
 install.packages("pacman") # command return to run a line of code
@@ -78,16 +78,19 @@ table(lab1_csv$bmonth, useNA = "ifany")
 
 ```
 
-#5B Answer: With any unusual values, I will treat than as NA
+#5B Answer: With any unusual values, I will convert them to the proper number format, if they do not fit in or make sense (ex. birthdate is 58) or are blank I will then treat as NA.
 
 ```{r}
-# Making sure all data is in numeric form
+# Making sure all data is in numeric form (also accounting for mispelling)
 
 month_map <- c(
-  "January" = 1,  "February" = 2,  "March" = 3,     "April" = 4,
-  "May" = 5,      "June" = 6,      "July" = 7,      "August" = 8,
-  "September" = 9,"October" = 10,  "November" = 11, "December" = 12
+  "January" = 1, "February" = 2, "March" = 3, "April" = 4,
+  "May" = 5, "June" = 6, "june" = 6, "July" = 7, "August" = 8,
+  "September" = 9, "Septemeber" = 9, "October" = 10,
+  "November" = 11, "December" = 12
 )
+
+
 
 lab1_csv$bmonth <- ifelse(
   lab1_csv$bmonth %in% names(month_map), 
@@ -152,3 +155,22 @@ print(season_table_with_sums)
 ### 
 
 **7. Pick your favorite variable or variables to analyze, come up with a question you want to answer with that variable or variables, generate the code, and provide an answer to your question. Describe what you did using comments (i.e. #’s).**
+
+Question: What is our favorite number as a class?
+
+```{r}
+#count up how many times each number appears
+
+fav_num_counts <- table(lab1_csv$fav_num)
+print(fav_num_counts)
+
+#number with highest count is our class' favorite
+
+```
+
+```{r}
+#max number count is class favorite
+
+favorite_number <- as.numeric(names(fav_num_counts)[which.max(fav_num_counts)])
+cat("The class's favorite number is:", favorite_number, "\n")
+```
