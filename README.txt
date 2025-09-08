@@ -1,7 +1,8 @@
 # Class 1 Survey Data Analysis
 
 ## Project Description
-This repository includes the Class 1 survey dataset and R code used to analyze it. The project is part of an exercise to practice working with real-world data in R.
+This repository includes the Class 1 survey dataset and R code used to analyze it. The project is part of an exercise to practice working with real-world data in R.  
+Data includes the class's favorite things, activities, quotes, public health interests, and experiences. 
 
 ## Files Included
 - `class1_survey.csv`: Cleaned version of the Class 1 survey dataset
@@ -21,7 +22,7 @@ This repository includes the Class 1 survey dataset and R code used to analyze i
 4. Run the script
 
 ## Author
-- Name: YOUR NAME  
-- Course: COURSE NAME  
-- Date: MONTH YEAR
+- Name: Katie Lawler
+- Course: Advanced Data Analysis  
+- Date: September 2025
 
