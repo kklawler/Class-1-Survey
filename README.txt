@@ -17,7 +17,7 @@ Data includes the class's favorite things, activities, quotes, public health int
 
 ## How to Run the Code
 1. Download or clone this repository to your computer
-2. Open `analysis_code.R` in RStudio
+2. Open `analysis_code.Rmd` in RStudio
 3. Make sure your working directory is set to the folder where the files are saved
 4. Run the script
 
