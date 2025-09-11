@@ -182,3 +182,14 @@ print(fav_num_counts)
 favorite_number <- as.numeric(names(fav_num_counts)[which.max(fav_num_counts)])
 cat("The class's favorite number is:", favorite_number, "\n")
 ```
+
+**Saving cleaned "class1_survey.csv" file as .csv to be put in repository**
+
+```{r}
+setwd("/Users/maryklawler/Desktop/Class 1 Survey") #checking correct directory
+getwd() 
+
+write.csv(lab1_csv, "class1_survey.csv", row.names = FALSE)
+
+
+```
